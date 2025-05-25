@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Calculator</title>
+  <meta name="description" content="Simple Calculator With Dark Mode." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/x-icon" href="assets/calculator.ico">
+  <link rel="stylesheet" href="styles/dark.css" id="theme" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="container">
+      <div class="header-container">
+        <!-- This heading also notifies about the theme change.-->
+        <h1 id="toast">Calculator</h1>
+        <div class="top-buttons">
+          <a href="https://github.com/hela9797/Scientific-Calculator">
+            <img src="assets/GitHubLight.svg" alt="Sun Icon" height="25.5" width="25.5" id="github-icon">
+          </a>
+          <button type="button" onclick="changeTheme()" class="theme-button">
+            <img src="assets/SunIcon.svg" alt="Theme Icon" height="22" width="22" id="theme-icon">
+          </button>
+        </div>
+      </div>
+      
+      <div class="button-grid">
+        <input type="text" id="result" readonly />
+
+        <input type="button" value="C" onclick="result.value=''" id="clear-button" />
+        <input type="button" value="=" onclick="calculate(result.value)" id="equal-button" />
+
+        <input type="button" value="1" onclick="liveScreen(1)" />
+        <input type="button" value="2" onclick="liveScreen(2)" />
+        <input type="button" value="3" onclick="liveScreen(3)" />
+        <input type="button" value="+" onclick="liveScreen('+')" />
+        <input type="button" value="-" onclick="liveScreen('-')" />
+
+        <input type="button" value="4" onclick="liveScreen(4)" />
+        <input type="button" value="5" onclick="liveScreen(5)" />
+        <input type="button" value="6" onclick="liveScreen(6)" />
+        <input type="button" value="x" onclick="liveScreen('*')" />
+        <input type="button" value="/" onclick="liveScreen('/')" />
+
+        <input type="button" value="7" onclick="liveScreen(7)" />
+        <input type="button" value="8" onclick="liveScreen(8)" />
+        <input type="button" value="9" onclick="liveScreen(9)" />
+        <input type="button" value="0" onclick="liveScreen(0)" />
+        <input type="button" value="." onclick="liveScreen('.')" />
+
+        <input type="button" value="sin" onclick="liveScreen('sin(')" />
+        <input type="button" value="cos" onclick="liveScreen('cos(')" />
+        <input type="button" value="tan" onclick="liveScreen('tan(')" />
+        <input type="button" value="log" onclick="liveScreen('log(')" />
+        <input type="button" value="ln" onclick="liveScreen('ln(')" />
+
+        <input type="button" value="(" onclick="liveScreen('(')" />
+        <input type="button" value=")" onclick="liveScreen(')')" />
+        <input type="button" value="√" onclick="liveScreen('sqrt(')" />
+        <input type="button" value="π" onclick="liveScreen('3.1415926535')" />
+        <input type="button" value="^" onclick="liveScreen('^')" />
+      </div>
+    </div>
+  </div>
+  <script src="scripts/script.js">
+  </script>
+</body>
+
+</html>
