@@ -6,6 +6,14 @@ const themeIcon = document.getElementById("theme-icon");
 const res = document.getElementById("result");
 const toast = document.getElementById("toast");
 
+res.addEventListener("paste", (e) => {
+  e.preventDefault();
+  const text = e.clipboardData.getData("text/plain");
+  res.value += text;
+});
+
+let historyData = [];
+
 function calculate(value) {
   // count opened and closed parentheses
   const openParens = (value.match(/\(/g) || []).length;
@@ -34,8 +42,13 @@ function calculate(value) {
       setTimeout(() => {
         res.value = "";
       }, 1300);
-    } else {
+    } 
+    else {
       res.value = calculatedValue;
+      // ✅ Add to history
+      // Save to history
+      historyData.push(`${balancedValue} = ${calculatedValue}`);
+      updateHistoryUI();
     }
   } catch (err) {
     res.value = "Invalid Input";
@@ -98,8 +111,6 @@ function keyboardInputHandler(e) {
     res.value += "6";
   } else if (e.key === "7") {
     res.value += "7";
-  } else if (e.key === "7") {
-    res.value += "7";
   } else if (e.key === "8") {
     res.value += "8";
   } else if (e.key === "9") {
@@ -134,3 +145,18 @@ function keyboardInputHandler(e) {
     res.value = resultInput.substring(0, res.value.length - 1);
   }
 }
+
+function updateHistoryUI() {
+  const historyLog = document.getElementById("history-log");
+  historyLog.innerHTML = historyData
+    .slice() // copy array
+    .reverse() // newest at top
+    .map(entry => `<div>${entry}</div>`)
+    .join("");
+}
+
+function clearHistory() {
+  historyData = [];
+  updateHistoryUI();
+}
+
