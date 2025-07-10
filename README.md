@@ -45,6 +45,8 @@ Scientific-Calculator/
 │ └── GitHubLight.svg
 ```
 
+---
+
 ## 🚀 How to Run
 
 > No installation or setup required! Just double-click or open `index.html` in any browser.
