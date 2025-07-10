@@ -49,8 +49,6 @@ Scientific-Calculator/
 
 > No installation or setup required! Just double-click or open `index.html` in any browser.
 
-### 💻 Step-by-Step:
-
 ### 1. **Navigate to the project folder:**
 ```bash
 cd Scientific-Calculator
@@ -61,12 +59,16 @@ cd Scientific-Calculator
 - Right-click → Open with → Your browser
 - OR drag the file into your browser tab
 
+---
+
 ## 🎮 Keyboard Shortcuts
 
 - Type numbers and operators directly on your keyboard
 - Enter → Calculate
 - Backspace → Delete last character
 - Clipboard support: Paste expressions with Ctrl + V
+
+---
 
 ## 🧪 Functions Supported
 
@@ -79,6 +81,7 @@ cd Scientific-Calculator
 | Trigonometry | `sin(x)` etc | `cos(0)` = 1                 |
 | π Constant   | `π` button   | Inserts value `3.1415926535` |
 
+---
 
 ## 🧠 Logic Highlights
 
@@ -86,6 +89,8 @@ cd Scientific-Calculator
 - Evaluates ^ as exponent (** in JS)
 - Maps sin, cos, tan, log, ln, sqrt to Math functions
 - Result validation: Handles invalid inputs or math errors gracefully
+
+---
 
 ## 📦 Deployment
 
@@ -105,6 +110,10 @@ You can deploy this project as a static site using:
 https://<your-username>.github.io/Scientific-Calculator
 ```
 
+---
+
 ## 📸 Screenshots
 ![light mode](https://github.com/user-attachments/assets/e08b6b42-717f-4cd1-b4b2-6e57581d31cd)
 ![dark mode](https://github.com/user-attachments/assets/c108015b-058c-4cf2-a22f-7ecf8764ef1e)
+
+---
