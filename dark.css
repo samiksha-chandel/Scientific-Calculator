@@ -29,18 +29,58 @@ h1 {
 }
 
 .container {
-  width: 380px;
   display: flex;
   justify-content: center;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.calculator-panel {
+  width: 500px;
+  display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.history-panel {
+  background-color: #2f3332;
+  color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  width: 390px;
+  height: 510px;
+  overflow-y: auto;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+}
+
+.history-panel h3 {
+  margin-bottom: 10px;
+  font-size: 25px;
+  text-align: center;
+  color: #fffdfd;
+}
+
+#history-log {
+  flex-grow: 1;
+  overflow-y: auto;
+  margin-bottom: 10px;
+  max-height: 350px;
+  font-size: 20px;
+  word-break: break-word;
+  line-height: 1.4;
 }
 
 .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 90%;
+  width: 80%;
 }
 
 .top-buttons {
@@ -96,10 +136,29 @@ input[type="button"]:hover {
   color: #fff;
 }
 
-#clear-button {
+.history-button {
+  width: 90%;
+  padding: 20px;
+  font-size: 1.2em;
+  align-self: center;
+  color: white;
+  border: none;
+  background-color:rgb(236, 10, 10);
+  border-radius: 100px;
+}
+
+.history-button :hover {
+  background-color: rgb(240, 84, 84);
+}
+
+.clear-button {
   color: #fff;
-  background-color: rgb(255, 42, 42);
+  background-color: rgb(236, 10, 10);
   grid-column: span 1;
+}
+
+.clear-button :hover {
+  background-color: rgb(240, 84, 84);
 }
 
 a {
